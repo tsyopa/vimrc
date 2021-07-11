@@ -19,6 +19,11 @@ Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 Plug 'styled-components/vim-styled-components'
 call plug#end()
 
+set keymap=russian-jcukenwin
+set iminsert=0
+set imsearch=0
+highlight lCursor guifg=NONE guibg=Cyan
+
 colorscheme atom-dark-256
 "colorscheme molokai
 "colorscheme ayu
@@ -32,6 +37,7 @@ set number
 set autoindent 
 set softtabstop=4
 set expandtab
+set shiftwidth=4
 set hlsearch
 set nowrap
 set colorcolumn=81
