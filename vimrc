@@ -35,9 +35,7 @@ set background=dark
 set t_BE=
 set number
 set autoindent 
-set softtabstop=4
-set expandtab
-set shiftwidth=4
+set tabstop=4 softtabstop=0 expandtab shiftwidth=4 smarttab
 set hlsearch
 set nowrap
 set colorcolumn=81
@@ -70,9 +68,15 @@ nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
+nmap <silent> gn <Plug>(coc-rename)
 nmap <silent> [g <Plug>(coc-diagnostic-prev)
 nmap <silent> ]g <Plug>(coc-diagnostic-next)
+nmap <silent> go :CocCommand tsserver.organizeImports<CR>
+nmap <silent> gq :CocCommand tsserver.executeAutofix<CR>
 nnoremap <silent> K :call CocAction('doHover')<CR>
+
+autocmd BufEnter *.{js,jsx,ts,tsx} :syntax sync fromstart
+autocmd BufLeave *.{js,jsx,ts,tsx} :syntax sync clear
 
 " prettier settings
 let g:prettier#autoformat_config_present = 1
