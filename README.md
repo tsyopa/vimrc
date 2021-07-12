@@ -1,4 +1,16 @@
-Requires vim v8.2, node v14
+## Requirements
+
+Requires vim v8.2, node v14, ripgrep, bat, git-delta
+
+In shell config:
+```sh
+export RIPGREP_CONFIG_PATH=$HOME/.ripgreprc
+```
+
+In `.ripgreprc`:
+```
+--max-filesize=50K
+```
 
 
 ## Installation

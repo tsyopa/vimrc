@@ -3,13 +3,17 @@ Plug 'gosukiwi/vim-atom-dark'
 Plug 'ayu-theme/ayu-vim'
 Plug 'tomasr/molokai'
 
+Plug 'neoclide/jsonc.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'jiangmiao/auto-pairs'
 Plug 'vim-airline/vim-airline'
 Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-surround'
+"Plug 'codota/tabnine-vim'
 
+Plug 'felipec/vim-sanegx'
 Plug 'pangloss/vim-javascript'
 Plug 'maxmellon/vim-jsx-pretty'
 Plug 'leafgarland/typescript-vim'
@@ -52,6 +56,8 @@ autocmd FileType typescript setlocal softtabstop=2 shiftwidth=2
 autocmd FileType typescriptreact setlocal softtabstop=2 shiftwidth=2
 
 autocmd FileType java setlocal softtabstop=4 shiftwidth=4 expandtab! tabstop=4
+
+autocmd BufRead,BufNewFile *.json set filetype=jsonc
 
 vnoremap . :norm.<CR>
 
