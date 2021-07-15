@@ -1,6 +1,6 @@
 ## Requirements
 
-Requires vim v8.2, node v14, ripgrep, bat, git-delta
+Requires vim v8.2, node v14, ripgrep, bat, git-delta, the_silver_searcher
 
 In shell config:
 ```sh
