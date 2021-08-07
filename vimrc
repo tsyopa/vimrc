@@ -35,8 +35,8 @@ Plug 'styled-components/vim-styled-components'
 call plug#end()
 
 set nocompatible
-set ttyfast
 
+set hidden
 set keymap=russian-jcukenwin
 set iminsert=0
 set imsearch=0
@@ -71,6 +71,7 @@ set wildmenu
 set wildmode=longest:full,full
 set ignorecase smartcase
 set list listchars=tab:›\ ,trail:•,extends:#,nbsp:.
+set shortmess-=S
 
 " cursor in insert mode
 let &t_SI = "\e[6 q"
