@@ -105,6 +105,8 @@ nmap <silent> gq :CocCommand tsserver.executeAutofix<CR>
 nnoremap <silent> K :call CocAction('doHover')<CR>
 nnoremap <c-p> :Commands<CR>
 
+imap jk <ESC>
+
 autocmd BufEnter *.{js,jsx,ts,tsx} :syntax sync fromstart
 autocmd BufLeave *.{js,jsx,ts,tsx} :syntax sync clear
 
