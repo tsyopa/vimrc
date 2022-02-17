@@ -20,7 +20,6 @@ Plug 'vim-airline/vim-airline'
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-surround'
-Plug 'codota/tabnine-vim'
 
 Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
@@ -78,6 +77,7 @@ let &t_EI = "\e[2 q"
 
 autocmd FileType typescript setlocal softtabstop=2 shiftwidth=2
 autocmd FileType typescriptreact setlocal softtabstop=2 shiftwidth=2
+autocmd FileType javascript setlocal softtabstop=2 shiftwidth=2
 
 autocmd FileType java setlocal softtabstop=4 shiftwidth=4 expandtab! tabstop=4
 
@@ -85,8 +85,10 @@ autocmd BufRead,BufNewFile *.json set filetype=jsonc
 
 vnoremap . :norm.<CR>
 
-set rtp+=/usr/bin/fzf
-let $FZF_DEFAULT_COMMAND = 'ag -g ""'
+"set rtp+=/usr/bin/fzf
+"let $FZF_DEFAULT_COMMAND = 'ag -g ""'
+"let $FZF_DEFAULT_COMMAND = 'fd --type f --hidden --follow --exclude .git'
+let $FZF_DEFAULT_COMMAND = 'rg --files --no-messages'
 
 " coc settings
 let g:coc_global_extensions = [ 'coc-tsserver' ]
@@ -100,11 +102,12 @@ nmap <silent> ]g <Plug>(coc-diagnostic-next)
 nmap <silent> go :CocCommand tsserver.organizeImports<CR>
 nmap <silent> gq :CocCommand tsserver.executeAutofix<CR>
 nnoremap <silent> K :call CocAction('doHover')<CR>
+nnoremap <c-p> :Commands<CR>
 
 autocmd BufEnter *.{js,jsx,ts,tsx} :syntax sync fromstart
 autocmd BufLeave *.{js,jsx,ts,tsx} :syntax sync clear
 
 " prettier settings
-let g:prettier#autoformat_config_present = 1
+"let g:prettier#autoformat_config_present = 1
 let g:prettier#autoformat_require_pragma = 0
 
