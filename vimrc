@@ -31,6 +31,8 @@ Plug 'peitalin/vim-jsx-typescript'
 Plug 'neoclide/coc.nvim' , { 'branch' : 'release' }
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 Plug 'styled-components/vim-styled-components'
+
+Plug 'jceb/vim-orgmode'
 call plug#end()
 
 set nocompatible
